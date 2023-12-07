@@ -18,7 +18,7 @@ dbglog "collection started at: ${START_TIME}"
 # Call pre-install.sh, see commit msg
 pre-install.sh ${BASE_COLLECTION_PATH}
 
-# Call other gather scripts
+# Call other gather scripts.
 gather_namespaced_resources ${BASE_COLLECTION_PATH}
 gather_clusterscoped_resources ${BASE_COLLECTION_PATH}
 gather_noobaa_resources ${BASE_COLLECTION_PATH}
