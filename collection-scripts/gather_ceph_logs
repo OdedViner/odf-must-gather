@@ -34,7 +34,7 @@ for ns in $namespaces; do
         oc debug nodes/"${node}" <<CMDS
             chroot /host
             cd var/log
-            journalctl --since "2 days ago" | gzip > journal_"${node}".gz
+            journalctl --since "1 minute ago" | gzip > journal_"${node}".gz
             journalctl -k -o short-iso-precise --utc --no-hostname | gzip > kernel_"${node}".gz
             exit
 CMDS
